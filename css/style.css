@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.layout {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* 왼쪽 파트 */
+header {
+    height: 100%;
+    background-color: skyblue;
+    width: 250px;
+    padding: 2em 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+header > a {
+    width: 8em;
+    height: 8em;
+    margin-bottom: 30px;
+}
+
+.logo {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 100%;
+}
+
+.gnb {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 드롭다운 섹션 */
+.dropdown {
+    width: 100%;
+}
+
+.main > li > a {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(100, 125, 236);
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    /* word-break: keep-all; */
+}
+
+.sub > li {
+    display: block;
+    height: 0px;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgb(152, 185, 255);
+    line-height: 50px;
+    transition: all .5s;
+}
+
+/* 여기서부터 호버 */
+.main > .mainmenu4:hover > ul > li {
+    height: 50px;
+    border-bottom: 1px solid black;
+}
+
+.main > .mainmenu3:hover > ul > li {
+    height: 50px;
+    border-bottom: 1px solid black;
+}
+
+.sub > li:hover {
+    background-color: white;
+    transition: all 1s;
+}
+
+
+
+/* 오른쪽 섹션(재료 받기) */
+section {
+    width: calc(100% - 250px);
+    padding: 70px 70px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+/* 섹션 정렬 */
+.sectionflex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 90%;
+    align-items: center;
+}
+
+.material_con {
+    display: flex;
+    width: 100%;
+    height: 120px;
+    justify-content: space-between;
+    border-radius: 15px;
+    background-color: rgb(236, 236, 236);
+    align-items: center;
+}
+
+/* 식재료를 입력해주세요 */
+#material {
+    width: 80%;
+    font-size: 2em;
+    padding-left: 50px;
+    height: 60%;
+    background-color: inherit;
+    border: none;
+    outline: none;
+}
+
+/* 추가하기 버튼 */
+.material_con > p {
+    width: 120px;
+    height: 120px;
+    font-size: 48px;
+    line-height: 120px;
+    cursor: pointer;
+    /* border: 1px solid black; */
+    display: flex;
+    color: black;
+    justify-content: center;
+}
+
+.graybox {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    align-content: start;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: rgb(163, 163, 163);
+    height: calc(100% - 300px);
+    border-radius: 20px;
+    padding: 25px 30px;
+    /* overflow: scroll; */
+}
+
+.material-items {
+    display: inline-flex;
+    align-items: center;
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 40px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.material-items > button {
+    border: none;
+    color: red;
+    font-size: 40px;
+    background-color: inherit;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* 추천 받기 위치 잡기 */
+.result_con {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* 추천 받기 */
+.result {
+    padding: 30px 0;
+    background-color: skyblue;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 28px;
+    transition: .5;
+}
+
+.removeall {
+    padding: 30px 0;
+    background-color: rgb(134, 134, 134);
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 28px;
+    transition: .5;
+    color: white;
+}
+
+.removeall:hover {
+    background-color: rgb(100, 125, 236);
+}
+
+.result:hover {
+    background-color: rgb(100, 125, 236);
+    color: white;
+}
+
+#addMaterial {
+    align-items: center;
+    height: 50%;
+}
+
+
+/* 반응형 */
+@media screen and (max-width: 800px) {
+    .layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        width: 100%;
+        height: 20%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    header > a {
+        margin: 0;
+        /* width: 110px; */
+        /* height: 110px; */
+    }
+
+    .gnb {
+        width: 60%;
+        height: 110px;
+    }
+
+    .dropdown {
+        height: 100%;
+    }
+
+    /* 내비게이션 속성 변경 */
+    .gnb > a {
+        height: 100%;
+    }
+
+    .dropdown {
+        height: 130px;
+    }
+
+    .main {
+        height: 130px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        /* line-height: 130px; */
+    }
+
+    .main > .mainmenu4:hover > ul > li {
+        height: 0;
+        border-bottom: none;
+    }
+
+    .mainmenu4 {
+        height: 100%;
+        width: 33%;
+        text-align: center;
+        /* border: 1px solid black; */
+    }
+
+    .main > li > a {
+        height: 100%;
+        line-height: 130px;
+    }
+
+    .mainmenu4 > a > p {
+        margin: 0 10px;
+        white-space: nowrap;
+    }
+
+    /* 여기서부터 섹션(헤더 제외 부분) */
+    section {
+        width: 100%;
+        height: 80%;
+        padding: 20px 20px;
+    }
+
+    #material {
+        font-size: 24px;
+    }
+}

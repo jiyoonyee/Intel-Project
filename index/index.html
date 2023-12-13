@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Fridge - Materials</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="layout">
+        <header>
+            <a href="#"><img src="../images/logo.png" class="logo"></a>
+            <!-- 추천 메뉴 섹션 -->
+            <div class="gnb">
+                <div class="dropdown">
+                    <ul class="main">
+                        <li class="mainmenu4">
+                            <a href="#">
+                                <p>추천 메뉴</p>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="#">떡볶이</a></li>
+                                <li><a href="#">돈까스</a></li>
+                                <li><a href="#">잔치국수</a></li>
+                                <li><a href="#">계란국</a></li>
+                            </ul>
+                        </li>
+                        <li class="mainmenu4">
+                            <a href="#">간편식</a>
+                            <ul class="sub">
+                                <li><a href="#">떡국</a></li>
+                                <li><a href="#">제육볶음</a></li>
+                                <li><a href="#">김치볶음밥</a></li>
+                                <li><a href="#">짜파구리</a></li>
+                            </ul>
+                        </li>
+                        <li class="mainmenu4">
+                            <a href="#">디저트</a>
+                            <ul class="sub">
+                                <li><a href="#">아이스 셔벗</a></li>
+                                <li><a href="#">팬케이크</a></li>
+                                <li><a href="#">탕후루</a></li>
+                                <li><a href="#">쿠키</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="sectionflex">
+                <div class="material_con">
+                    <input type="text" id="material" placeholder="식재료를 입력해주세요." autofocus>
+                    <p id="addMaterial">➕</p>
+                </div>
+                <div class="graybox"></div>
+                <div class="result_con">
+                    <div class="removeall">모두 삭제</div>
+                    <a href="result.html"><div class="result">추천 받기</div></a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="../js/list.js"></script>
+</body>
+
+</html>
